@@ -1,7 +1,8 @@
+language: generic
+
 matrix:
   include:
     - os: linux
-      language: generic
       sudo: required
       dist: bionic
       before_install:
@@ -11,7 +12,6 @@ matrix:
         - eval "$(curl -sL https://swiftenv.fuller.li/en/latest/install.sh)"
 
     - os: osx
-      language: generic
       osx_image: xcode12.2
       before_install:
         - brew update
