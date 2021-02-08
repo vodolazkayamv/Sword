@@ -1,16 +1,17 @@
-language: generic
-
 matrix:
   include:
     - os: linux
-      dist: trusty
+      language: generic
       sudo: required
+      dist: bionic
       before_install:
         - sudo -E add-apt-repository -y ppa:chris-lea/libsodium
         - sudo apt-get update && sudo apt-get install -y libsodium-dev
       install:
-        - eval "$(curl -sL https://gist.githubusercontent.com/Azoy/a723677c6cdc891e9b0ab2df1fc1d018/raw/728798938707727afc75706cd2e1babe12990acd/swift-4.0-travis.sh)"
+        - eval "$(curl -sL https://swiftenv.fuller.li/en/latest/install.sh)"
+
     - os: osx
+      language: generic
       osx_image: xcode12.2
       before_install:
         - brew update
