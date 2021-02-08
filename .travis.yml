@@ -6,7 +6,6 @@ matrix:
       sudo: required
       dist: bionic
       before_install:
-        - sudo -E add-apt-repository -y ppa:chris-lea/libsodium
         - sudo apt-get update && sudo apt-get install -y libsodium-dev
       install:
         - eval "$(curl -sL https://swiftenv.fuller.li/en/latest/install.sh)"
