@@ -11,7 +11,7 @@ matrix:
       install:
         - eval "$(curl -sL https://gist.githubusercontent.com/Azoy/a723677c6cdc891e9b0ab2df1fc1d018/raw/728798938707727afc75706cd2e1babe12990acd/swift-4.0-travis.sh)"
     - os: osx
-      osx_image: xcode9
+      osx_image: xcode12.2
       before_install:
         - brew update
         - brew install libsodium
