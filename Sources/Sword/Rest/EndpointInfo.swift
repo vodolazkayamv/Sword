@@ -17,7 +17,7 @@ extension Endpoint {
         return (.get, "/gateway/bot")
 
       case let .addPinnedChannelMessage(channel, message):
-        return (.post, "/channels/\(channel)/pins/\(message)")
+        return (.put, "/channels/\(channel)/pins/\(message)")
 
       case let .beginGuildPrune(guild):
         return (.post, "/guilds/\(guild)/prune")
